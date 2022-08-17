@@ -1,0 +1,482 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.nav-bar{
+    background-color: purple;
+    padding: 1% 7%;
+    text-align: center;
+}
+.nav-icon img{
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+    
+}
+h1{
+    font-size: 3rem;
+    color:greenyellow;
+    text-align: center;
+    cursor:help;
+}
+h2{
+    font-size: 2rem;
+}
+ a{
+    text-decoration: none;
+    padding: 2px;
+   }
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+[class*="col-"]{
+    width: 100%;
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.nav-menu a{
+    background-color: rgb(68, 59, 6);
+    border-radius: 25px;
+     margin: 5px 0;
+     padding: 10px;
+     font-size: 1.5rem;
+     color:white;
+}
+.nav-menu a:hover{
+    background-color: teal;
+}
+.nav-bar::after{
+    content: '';
+    display: table;
+    clear: both;
+
+}
+              /* nav end */
+
+
+
+        .profile{
+            text-align: center;
+            position: relative;
+            padding: 150px 10px;
+            background-color: aqua;
+            max-height: 500px;
+        }
+    .top-pic{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        position: absolute;
+        right:50px;
+        top: 20px;
+        transition:transform 4s;
+    }
+    .top-pic:hover{
+        transform: rotate(360deg);
+    }
+    .pro-desc h2{
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 2rem;
+    } 
+   .pro-desc p{
+    text-align: center;
+    color:green;
+    width: 90%;
+    margin: 0 auto 10px auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+    }
+    .cube{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin-top: 50px;
+        left: 30px;
+        transform-style: preserve-3d;
+        transform: rotateX(-30deg);
+        animation: anim 4s linear infinite;
+    }
+      @keyframes anim{
+        0%{
+            transform: rotateX(-30deg) rotateY(0deg);
+        }
+        100%{
+            transform: rotateX(-30deg) rotateY(360deg);
+        }
+    } 
+    .cube div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
+    .cube div span{
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:linear-gradient(#ffff00,#00ec00);
+        transform: rotateY(calc(90deg * var(--i))) translateZ(50px);
+    }
+
+    .profile ::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+                /* profile end */
+
+
+                         /* About me start */
+
+        
+                    .about-me{
+                        background-color:black;
+                        text-align: center;
+                        padding:1% 7%;
+                        color:white;
+                    } 
+                    .dotted-hr{
+                        border: dotted 5px white;
+                        border-bottom: none;
+                        width: 100px;
+                        margin: 5px auto;
+                    }  
+                .aboutme-img img{
+                    width: 150px;
+                    height: 150px;
+                    border: 5px solid black;
+                     border-radius:50%;
+                }
+                .about-me p{
+                    text-align: center;
+                    font-size: 1.5rem;
+                }
+                .about-me::after{
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+                 /* About me end */
+
+
+
+                 /* professional experience start */
+                 .professional-experience{
+                    padding: 5px 5px;
+                    border-radius: 10px;
+                    background-color: gold;
+                 }
+                 .professional-experience .card{
+                    background-color: gray;
+                    height: 600px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    transition: 1s;
+
+                 }
+                 .card:hover{
+                    box-shadow:0 4px 12px 5px black;
+                 }
+                 .card-icon{
+                    text-align: center;
+                 }
+                 .card-icon img{
+                    margin: 5px;
+                    width: 100px;
+                    height: 100px;
+                 }
+                 .img-icon{
+                    border: 5px solid black;
+                    padding: 5px;
+                    border-radius: 50%;
+                 }
+                 .card-title h2{
+                    text-align: center;
+                    background-color: royalblue;
+                    color:white;
+                    border-radius: 50px;
+                    padding: 5px;
+                 }
+                 .card-desc{
+                    margin-top: 25px;
+                    padding: 30px 0;
+                    text-transform: uppercase;
+
+                 }
+                 .card-desc > p{
+                    
+                    text-align: center;
+                    font-size: 1.5rem;
+                    margin-top: 50px;
+
+                 }
+                 .skill-container{
+                    padding-right: 40px;
+
+                 }
+                 .skill-container li{
+                    list-style: none;
+                    text-transform: uppercase;
+                    margin: 30px 10px;
+                    position: relative;
+                    font-weight: bolder;
+                 }
+                 .skill-container li::before{
+                    content: '';
+                    position: absolute;
+                    background-color:oldlace;
+                    width: 100%;
+                    height: 10px;
+                    top: calc(100% + 5px);
+                    left: 0;
+                    border-radius: 10px;
+
+                 }
+                 .skill-container li::after{
+                    content: '';
+                    position: absolute;
+                    background-color:forestgreen;
+                    width:0;
+                    height: 10px;
+                    top: calc(100% + 5px);
+                    left: 0;
+                    border-radius: 10px;
+
+                    animation-duration: 2s;
+                    animation-delay: 2s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: 2;
+                    animation-timing-function: linear;
+                 }
+                 .skill-container li.c::after{
+                    animation-name: c;
+
+                 }
+                 @keyframes c{
+                    to{
+                        width: 90%;
+                        background-color: aqua;
+                    }
+                 }
+                 .skill-container li.cpp::after{
+                    animation-name: cpp;
+
+                 }
+                 @keyframes cpp{
+                    to{
+                        width: 80%;
+                        background-color: blue;
+                    }
+                 }
+
+                 .skill-container li.html::after{
+                    animation-name: html;
+
+                 }
+                 @keyframes html{
+                    to{
+                        width: 80%;
+                        background-color: #00ec00;
+                    }
+                 }
+                 .skill-container li.css::after{
+                    animation-name: css;
+
+                 }
+                 @keyframes css{
+                    to{
+                        width: 70%;
+                        background-color: hotpink;
+                    }
+                }
+                    .skill-container li.js::after{
+                        animation-name: js;
+    
+                     }
+                     @keyframes js{
+                        to{
+                            width: 20%;
+                            background-color:firebrick;
+                        }
+                    }
+
+                    .skill-container li.nodejs::after{
+                        animation-name: njs;
+    
+                     }
+                     @keyframes njs{
+                        to{
+                            width: 20%;
+                            background-color:salmon;
+                        }
+                    }
+                    .skill-container li.bootstrap::after{
+                        animation-name:bs;
+    
+                     }
+                     @keyframes bs{
+                        to{
+                            width: 70%;
+                            background-color:orange;
+                        }
+                    }
+                    .skill-container li.php::after{
+                        animation-name: php;
+    
+                     }
+                     @keyframes php{
+                        to{
+                            width: 60%;
+                            background-color:black;
+                        }
+                    }
+                    .professional-experience::after{
+                        content: '';
+                        display: table;
+                        clear: both;
+                    }
+                     /* professional experience end */
+
+                     /* achivment & more ways to contact start */
+                     .achivement-contact{
+                        margin: 0 auto;
+                         padding:1% 8%;
+                         background-color:gray;
+                         text-align: center;
+                     }
+                     .achivment{
+                        width: 100%;
+                        background-color: hotpink;
+                        text-align:left;
+                        border-radius: 10px;
+                        font-size: 1.5rem;
+
+                     }
+                     .achivment h2{
+                        text-align: center;
+                        background-color:blueviolet;
+                        color: white;
+                        border: none;
+                        border-radius: 30px;
+                     }
+                     .d-hr{
+                        border: 5px dotted white;
+                        border-bottom: none;
+                        width: 100px;
+                        margin: 5px auto;
+                     }
+                     .achivment p{
+                     text-align: left; 
+                        
+                     }
+                     .contact{
+                        text-align: center;
+                         background-color:black; 
+                        margin-top: 10px;
+                        border-radius: 10px;
+                     }
+                     .contact h2{
+                        color:white;
+                        border: none;
+                        background-color:blueviolet;
+                        border-radius: 30px;
+                     }
+                     .contact input, textarea{
+                        width: 100%;
+                        margin: 5px;
+                        padding: 10px;
+                        text-align: center;
+                        font-size: 1rem;
+                        resize: none;
+                        border: none;
+                        border-radius: 10px;
+
+                     }
+                     .contact button{
+                        background-color: orangered;
+                        border: none;
+                        font-size: 1rem;
+                        border-radius: 5px;
+                        padding: 5px;
+                        margin: 3px 5px;
+                        color: white;
+                        width: 100px;
+                        cursor: pointer;
+                     }
+                     .contact button:hover{
+                        background-color: aqua;
+                        color: black;
+                        
+                     }
+                      p input{
+                        background-color: aqua;
+                        color: black
+                     }
+                      textarea{
+                        background-color: aqua;
+                     }
+                     .contact-icon{
+                        /* background-color:fuchsia; */
+                        margin: 5px 0;
+                        border-radius: 10px;
+                        margin-top: 10px;
+                        text-align:center;
+                     }
+                     .contact-icon h2{
+                        color: white;
+                        text-align: center;
+                        background-color: blueviolet;
+                        border-radius: 30px;
+                     }
+                     .button-icon .btn{
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 25px;
+                        margin: 5px;
+                        padding: 5px;
+                     }
+                     .button-icon .btn:hover{
+                        background-color: gray;
+                        cursor: pointer;
+                     }
+                     
+
+
+                     .achivement-contact::after{
+                        content: '';
+                        display: table;
+                        clear: both;
+                     }
+                     .f{
+                        background-color: black;
+                        width: 100%;
+                        padding: 10px;
+                        color:white;
+                        text-align: center;
+                        font-size: 1.3rem;
+                     }
+
+
+
+                     /* achivment & more ways to contact ends */
+                     
+
+
+
+
+                             
